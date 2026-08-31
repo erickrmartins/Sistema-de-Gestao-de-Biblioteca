@@ -4,3 +4,5 @@ function OlaMundo() {
         <span>Olá, mundo!</span>
     )
 }
+
+export default OlaMundo;
