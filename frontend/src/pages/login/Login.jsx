@@ -25,7 +25,7 @@ function Login() {
                 </div>
 
                 <div className={styles.divSubmit}>
-                    <button type="submit" onClick={() => navigate('/')}
+                    <button type="submit" onClick={() => navigate('/acervo')}
                     >Entrar</button>
                 </div>
 
