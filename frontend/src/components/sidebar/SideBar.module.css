@@ -87,7 +87,7 @@
     color: #FFFFFF;
     background-color: green;
 
-    .icon path, .icon line{
+    .icon path, .icon line, .icon circle {
         color: #FFFFFF;
     }
 }

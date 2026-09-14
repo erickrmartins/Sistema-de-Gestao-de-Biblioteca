@@ -31,7 +31,7 @@ function SideBar() {
                         <button
                             className={isSelected("acervo") ? styles.selected : ''}
 
-                            onClick={() => navigate('/')}
+                            onClick={() => navigate('/acervo')}
                         >
                             <BooksIcon className={styles.icon} />
                             Acervo</button>
@@ -49,7 +49,7 @@ function SideBar() {
             <div className={styles.footer}>
                 <div className={styles.navItem}>
                     <button
-                        className={isSelected("/config") ? styles.selected : ''}
+                        className={isSelected("config") ? styles.selected : ''}
                         onClick={() => navigate('/config')}
                     >
                         <ConfigIcon className={styles.icon} />

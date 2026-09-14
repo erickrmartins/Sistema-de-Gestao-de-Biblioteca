@@ -1,6 +1,7 @@
 import styles from './Main.module.css';
 import Header from '../../components/header/Header.jsx';
 import Sidebar from '../../components/sidebar/SideBar.jsx';
+import { Outlet } from 'react-router-dom';
 
 function Main() {
     return (
@@ -8,10 +9,16 @@ function Main() {
             <aside className={styles.sidebar}>
                 <Sidebar />
             </aside>
-            <header className={styles.header}>
-                <Header />
-            </header>
-            
+
+            <div className={styles.mainContainer}>
+                <header className={styles.header}>
+                    <Header />
+                </header>
+                <main className={styles.main}>
+                    <Outlet />
+                </main>
+            </div>
+
         </div>
     )
 }
