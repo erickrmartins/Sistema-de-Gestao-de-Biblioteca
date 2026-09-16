@@ -17,10 +17,10 @@ function App() {
       <Route path="/" element={<Navigate to={'/acervo'} />} />
       <Route element={<Main />}>
         <Route path="/acervo" element={<Collection />} />
-        <Route path="/perfil" element={<Profile />}/>
-        <Route path="/config" element={<Config />}/>
-      </Route>
+        <Route path="/perfil" element={<Profile />} />
+        <Route path="/config" element={<Config />} />
 
+      </Route>
     </Routes>
   )
 }
