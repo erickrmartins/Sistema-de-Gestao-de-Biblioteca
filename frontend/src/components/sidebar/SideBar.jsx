@@ -23,7 +23,7 @@ function SideBar() {
         <aside className={styles.sidebar}>
             <div className={styles.header}>
                 <div className={styles.profile}>
-
+                    
                 </div>
 
                 <div className={styles.navigation}>

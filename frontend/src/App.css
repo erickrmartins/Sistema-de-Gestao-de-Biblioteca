@@ -1,5 +1,5 @@
 * {
-    color: #000000;
+    color: var(--color-text-main);
 
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -10,6 +10,45 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #EFEFEF;
+    background-color: var(--color-bg-main);
 
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    /* Background */
+
+    /* Principal */
+    --color-bg-main: #EFEFEF;
+    /* Cards */
+    --color-bg-card: #FFFFFF;
+    /* Card Shadow */
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    /* Cores */
+
+    /* Verde  */
+    --color-green: #16A34A;
+
+    /* Verde hover */
+    --color-green-hover: #15803D;
+
+    /* Texto */
+
+    /* Principal */
+    --color-text-main: #000000;
+    /* Secundário */
+    --color-text-sec: #64748B;
+
+    /* Status */
+    
+    /* Perigo */
+    --color-danger: #DC2626;
+    /* Alerta */
+    --color-warning: #D97706;
+    /* Sucesso */
+    --color-success: #16A34A;
 }
