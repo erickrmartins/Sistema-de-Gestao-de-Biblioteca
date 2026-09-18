@@ -7,6 +7,7 @@ import Main from './pages/main/Main.jsx'
 import Collection from './pages/collection/Collection.jsx'
 import Profile from './pages/profile/Profile.jsx'
 import Config from './pages/config/Config.jsx'
+import NotFound from './pages/not-found/NotFound.jsx'
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
         <Route path="/acervo" element={<Collection />} />
         <Route path="/perfil" element={<Profile />} />
         <Route path="/config" element={<Config />} />
+
+        <Route path="*" element={<NotFound />} />
 
       </Route>
     </Routes>

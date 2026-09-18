@@ -5,6 +5,7 @@ import LogoutIcon from '../../assets/logout.svg?react';
 import ProfileIcon from '../../assets/profile.svg?react';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import ProfileCard from '../profile-card/ProfileCard.jsx'
 
 function SideBar() {
     const navigate = useNavigate();
@@ -23,7 +24,7 @@ function SideBar() {
         <aside className={styles.sidebar}>
             <div className={styles.header}>
                 <div className={styles.profile}>
-                    
+                    <ProfileCard />
                 </div>
 
                 <div className={styles.navigation}>
