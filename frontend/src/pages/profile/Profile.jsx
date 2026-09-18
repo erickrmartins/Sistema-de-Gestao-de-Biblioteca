@@ -2,50 +2,16 @@ import styles from './Profile.module.css'
 import ProfilePicture from '../../assets/profile-picture.svg?react'
 import BookIcon from '../../assets/book.svg?react'
 import { Link } from 'react-router-dom'
+import { DataProfile } from '../../fake-data/DataProfile.jsx'
+import { DataBooks } from '../../fake-data/DataBooks.jsx'
+import { DataLoans } from '../../fake-data/DataLoans.jsx'
 
 function Profile() {
-    const user = {
-        name: "Nome Completo",
-        memberSince: 2026,
-        booksRead: 3
-    }
+    const user = DataProfile();
 
-    const books = [
-        { id: 1, name: "Livro 1" },
-        { id: 2, name: "Livro 2" },
-        { id: 3, name: "Livro 3" },
-        { id: 4, name: "Livro 4" },
-        { id: 5, name: "Livro 5" },
-        { id: 6, name: "Livro 6" },
-    ]
+    const books = DataBooks();
 
-    const loans = [
-        {
-            id: 1,
-            book: books[0],
-            tillDate: 2
-        },
-        {
-            id: 2,
-            book: books[1],
-            tillDate: 3
-        },
-        {
-            id: 3,
-            book: books[2],
-            tillDate: 3
-        },
-        {
-            id: 4,
-            book: books[3],
-            tillDate: 2
-        },
-        {
-            id: 5,
-            book: books[4],
-            tillDate: 3
-        }
-    ]
+    const loans = DataLoans();
 
     return (
         <div className={styles.container}>
@@ -54,7 +20,7 @@ function Profile() {
                     <ProfilePicture className={styles.icon} />
                     <div className={styles.data}>
                         <span className={styles.name}>{user.name}</span>
-                        <span className={styles.since}>Membro desde {user.memberSince}</span>
+                        <span className={styles.since}>Membro desde {user.createdAt.split('/')[2]}</span>
                         <div className={styles.booksRead}>
                             <label>Livros Lidos</label>
                             <span>{user.booksRead}</span>
@@ -66,16 +32,14 @@ function Profile() {
 
             <div className={styles.cards}>
                 <div className={styles.card}>
-                    <label className={styles.cardTitle}>Empréstimos Atuais</label>
+                    <Link to='/perfil/emprestimos' className={styles.cardTitle}>Empréstimos Atuais</Link>
                     <div className={styles.items}>
                         {loans.slice(-2).map((loan) => (
-                            <Link to='/' key={loan.id} className={styles.item}>
+                            <Link to={`/acervo/${loan.copy.book.ISBN}`}key={loan.id} className={styles.item}>
                                 <BookIcon className={styles.bookIcon} />
                                 <div>
-                                    <label>{loan.book.name}</label>
-                                    <span
-                                        className={loan.tillDate < 3 ? styles.close : styles.far}
-                                    >Entrega em {loan.tillDate} dias.</span>
+                                    <label>{loan.copy.book.title}</label>
+                                    <span>Entrega em x dias.</span>
                                 </div>
                             </Link>
                         ))}
@@ -83,12 +47,12 @@ function Profile() {
                 </div>
 
                 <div className={styles.card}>
-                    <label className={styles.cardTitle}>Histórico de Leitura</label>
+                    <Link to='/perfil/historico' className={styles.cardTitle}>Histórico de Leitura</Link>
                     <div className={styles.items}>
                         {books.slice(-2).map((book) => (
-                            <Link to='/' key={book.id} className={styles.item}>
+                            <Link to={`/acervo/${book.ISBN}`} key={book.id} className={styles.item}>
                                 <BookIcon className={styles.bookIcon} />
-                                <label>{book.name}</label>
+                                <label>{book.title}</label>
                             </Link>
                         ))}
 
