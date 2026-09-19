@@ -35,7 +35,7 @@ function Profile() {
                     <Link to='/perfil/emprestimos' className={styles.cardTitle}>Empréstimos Atuais</Link>
                     <div className={styles.items}>
                         {loans.slice(-2).map((loan) => (
-                            <Link to={`/acervo/${loan.copy.book.ISBN}`}key={loan.id} className={styles.item}>
+                            <Link to={`/acervo/livro/${loan.copy.book.ISBN}`}key={loan.id} className={styles.item}>
                                 <BookIcon className={styles.bookIcon} />
                                 <div>
                                     <label>{loan.copy.book.title}</label>
@@ -50,7 +50,7 @@ function Profile() {
                     <Link to='/perfil/historico' className={styles.cardTitle}>Histórico de Leitura</Link>
                     <div className={styles.items}>
                         {books.slice(-2).map((book) => (
-                            <Link to={`/acervo/${book.ISBN}`} key={book.id} className={styles.item}>
+                            <Link to={`/acervo/livro/${book.ISBN}`} key={book.id} className={styles.item}>
                                 <BookIcon className={styles.bookIcon} />
                                 <label>{book.title}</label>
                             </Link>

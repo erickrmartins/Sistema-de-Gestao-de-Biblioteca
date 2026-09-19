@@ -21,10 +21,10 @@
     padding: 10px 30px 10px 30px;
     box-sizing: border-box;
 
-    background-color: #FFFFFF;
+    background-color: var(--color-bg-card);
 
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(150, 150, 150, 0.25);
+    box-shadow: var(--shadow-card);
 
     div {
         width: 100%;
@@ -85,13 +85,12 @@
     button {
         align-self: flex-end;
         border: 0px;
-        background-color: #FFFFFF;
+        background-color: var(--color-bg-card);
 
         &:hover {
             text-decoration: underline;
         }
     }
-
 }
 
 .divSubmit {
@@ -100,12 +99,12 @@
         height: 50px;
         border-radius: 5px;
         border: 0px;
-        background-color: #000000;
+        background-color: var(--color-text-main);
 
         font-size: 20px;
         font-weight: bold;
         letter-spacing: 2px;
-        color: #FFFFFF;
+        color: var(--color-bg-card);
     }
 }
 
@@ -115,12 +114,11 @@
     justify-content: center;
     align-items: center;
 
-
     button {
         border: 0px;
         height: 30px;
-        background-color: #FFFFFF;
-        color: #000000;
+        background-color: var(--color-bg-card);
+        color: var(--color-text-main);
         font-size: 14px;
         font-weight: 600;
 

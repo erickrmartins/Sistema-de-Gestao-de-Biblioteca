@@ -1,10 +1,14 @@
+import { DataAuthor } from "./DataAuthor.jsx";
 
 export function DataBooks() {
-    /* id: , title: , ISBN: , publishedAt: , genre: , numPages: , synopsis: , active: , recommended:  */
+    const authors = DataAuthor();
+
+    /* id: , title: , author: , ISBN: , publishedAt: , genre: , numPages: , synopsis: , active: , recommended: */
     const books = [
         {
             id: 1,
             title: '1984',
+            author: authors[0], // George Orwell
             ISBN: '9788535914849',
             publishedAt: '1949',
             genre: 'Ficção Distópica',
@@ -16,6 +20,7 @@ export function DataBooks() {
         {
             id: 2,
             title: 'O Hobbit',
+            author: authors[1], // J.R.R. Tolkien
             ISBN: '9788595084742',
             publishedAt: '1937',
             genre: 'Fantasia Alta',
@@ -27,6 +32,7 @@ export function DataBooks() {
         {
             id: 3,
             title: 'Dom Casmurro',
+            author: authors[2], // Machado de Assis
             ISBN: '9788535932591',
             publishedAt: '1899',
             genre: 'Literatura Brasileira',
@@ -38,6 +44,7 @@ export function DataBooks() {
         {
             id: 4,
             title: 'O Senhor dos Anéis: A Sociedade do Anel',
+            author: authors[1], // J.R.R. Tolkien
             ISBN: '9788595084759',
             publishedAt: '1954',
             genre: 'Fantasia Alta',
@@ -49,6 +56,7 @@ export function DataBooks() {
         {
             id: 5,
             title: 'Admirável Mundo Novo',
+            author: authors[3], // Aldous Huxley
             ISBN: '9788525056009',
             publishedAt: '1932',
             genre: 'Ficção Distópica',
@@ -60,6 +68,7 @@ export function DataBooks() {
         {
             id: 6,
             title: 'O Alquimista',
+            author: authors[4], // Paulo Coelho
             ISBN: '9788551002247',
             publishedAt: '1988',
             genre: 'Ficção Filosófica',
@@ -71,6 +80,7 @@ export function DataBooks() {
         {
             id: 7,
             title: 'O Pequeno Príncipe',
+            author: authors[5], // Antoine de Saint-Exupéry
             ISBN: '9788522031429',
             publishedAt: '1943',
             genre: 'Fábula Filosófica',
@@ -82,6 +92,7 @@ export function DataBooks() {
         {
             id: 8,
             title: 'Fahrenheit 451',
+            author: authors[6], // Ray Bradbury
             ISBN: '9788501099808',
             publishedAt: '1953',
             genre: 'Ficção Distópica',
@@ -93,6 +104,7 @@ export function DataBooks() {
         {
             id: 9,
             title: 'Orgulho e Preconceito',
+            author: authors[7], // Jane Austen
             ISBN: '9788535918237',
             publishedAt: '1813',
             genre: 'Romance de Época',
@@ -104,6 +116,7 @@ export function DataBooks() {
         {
             id: 10,
             title: 'A Metamorfose',
+            author: authors[8], // Franz Kafka
             ISBN: '9788535914856',
             publishedAt: '1915',
             genre: 'Ficção Absurdistas',
@@ -112,7 +125,7 @@ export function DataBooks() {
             active: true,
             recommended: false
         }
-    ]
+    ];
 
     return books;
 }
