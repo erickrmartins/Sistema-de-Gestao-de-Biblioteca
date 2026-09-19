@@ -51,4 +51,8 @@ a {
     --color-warning: #D97706;
     /* Sucesso */
     --color-success: #16A34A;
+
+    /* Botão */
+    --color-button-black-bg: #000000;
+    --color-button-black-text: #FFFFFF;
 }
