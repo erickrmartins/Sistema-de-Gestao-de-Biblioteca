@@ -7,5 +7,5 @@ export function DataProfile() {
 
     ]
 
-    return data[0];
+    return data[2];
 }

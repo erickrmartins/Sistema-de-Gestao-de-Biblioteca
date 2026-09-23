@@ -13,7 +13,7 @@ export function DataLoans() {
             copy: copies[0], // 1984-COP-01
             reader: reader,
             dtLoan: '2026-09-18',
-            dtEta: '2026-03-15',
+            dtEta: '2026-09-18',
             dtReturn: null,
             isRenewd: false,
             status: 'Ativo'
@@ -23,27 +23,27 @@ export function DataLoans() {
             copy: copies[5], // HOB-COP-01
             reader: reader,
             dtLoan: '2026-03-05',
-            dtEta: '2026-03-19',
+            dtEta: '2026-09-19',
             dtReturn: null,
             isRenewd: true,
             status: 'Ativo'
         },
         {
             id: 3,
-            copy: copies[11], // DOM-COP-02
+            copy: copies[7], // DOM-COP-02
             reader: reader,
-            dtLoan: '2026-03-10',
-            dtEta: '2026-03-24',
+            dtLoan: '2026-09-19',
+            dtEta: '2026-09-20',
             dtReturn: null,
             isRenewd: false,
             status: 'Ativo'
         },
         {
             id: 4,
-            copy: copies[15], // HOB-COP-06
+            copy: copies[8], // HOB-COP-06
             reader: reader,
-            dtLoan: '2026-02-10',
-            dtEta: '2026-02-24',
+            dtLoan: '2026-02-25',
+            dtEta: '2026-09-25',
             dtReturn: null,
             isRenewd: false,
             status: 'Atrasado'
@@ -70,7 +70,7 @@ export function DataLoans() {
         },
         {
             id: 7,
-            copy: copies[10], // DOM-COP-01
+            copy: copies[1], // DOM-COP-01
             reader: reader,
             dtLoan: '2026-02-01',
             dtEta: '2026-02-15',

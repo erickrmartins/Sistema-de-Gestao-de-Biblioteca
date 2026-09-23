@@ -2,202 +2,150 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 
-    height: 100%;
+    height: 80vh;
     width: 100%;
 
-    gap: 25px;
+    gap: 30px;
 }
 
 .char {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
 
     background-color: var(--color-bg-card);
-    border-radius: 10px;
+    border-radius: 75px;
     box-shadow: var(--shadow-card);
 
     box-sizing: border-box;
-    padding: 40px;
+    padding: 10px;
 
-    width: 100%;
-    height: 40%;
-}
-
-.info {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.icon {
-    width: 200px;
-    height: 200px;
-}
-
-.data {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-
-    width: 100%;
+    width: 40%;
     height: 100%;
 
-    .name {
-        font-size: 15px;
+    gap: 10px;
+
+    .icon {
+        width: 100%;
+        height: 75%;
     }
 
-    .since {
-        font-size: 12px;
-        color: var(--color-text-sec);
-    }
-
-    .booksRead {
+    .data {
         display: flex;
-        align-items: flex-start;
-        justify-content: center;
+        align-items: center;
+        justify-content: flex-start;
         flex-direction: column;
+        width: 100%;
 
-        background-color: var(--color-bg-main);
-        box-sizing: border-box;
-        padding: 3px 10px 3px 10px;
-        border-radius: 10px;
+        .name {
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+        }
 
-        label {
-            font-size: 10px;
+        .since {
+            font-size: 12px;
             color: var(--color-text-sec);
         }
 
-        span {
-            font-size: 14px;
+        .booksRead {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+
+            background-color: var(--color-bg-main);
+            box-sizing: border-box;
+            padding: 3px 10px 3px 10px;
+            border-radius: 10px;
+
+            label {
+                font-size: 10px;
+                color: var(--color-text-sec);
+            }
+
+            span {
+                font-size: 14px;
+            }
         }
     }
-}
 
-.infoButton {
-    background-color: var(--color-bg-card);
+    .infoButton {
+        background-color: var(--color-bg-card);
 
-    border-radius: 5px;
-    font-size: 12px;
-    border: 1px solid #000000;
+        font-size: 16px;
+        letter-spacing: 1px;
 
-    width: 20%;
-    height: 20%;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--color-text-main);
+        color: var(--color-bg-card);
 
-    &:hover {
-        cursor: pointer;
+        width: 80%;
+        padding: 5px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
 .cards {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-    height: 60%;
-
-    gap: 20px;
-
-
-    box-sizing: border-box;
-}
-
-.card {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 
+    width: 60%;
     height: 100%;
-    width: 100%;
 
+    gap: 5%;
 
-    border-radius: 10px;
-    background-color: var(--color-bg-card);
-    box-shadow: var(--shadow-card);
-
-    .cardTitle {
+    .card {
         display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
-        justify-content: center;
-        height: 20%;
+
+        height: 47.5%;
         width: 100%;
 
-        border-bottom: 2px solid var(--color-bg-main);
-    }
+        border-radius: 75px;
+        background-color: var(--color-bg-card);
+        box-shadow: var(--shadow-card);
 
-    .items {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-
-        width: 100%;
-        height: 100%;
-
-        gap: 10px;
         box-sizing: border-box;
-        padding: 20px;
+        padding: 10px 50px 10px 50px;
 
-        .item {
+        .cardTitle {
             display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
             align-items: center;
-
-            border: 2px solid var(--color-bg-main);
-            border-radius: 10px;
-
-            box-sizing: border-box;
-            padding: 10px;
-
+            justify-content: center;
             width: 100%;
-            height: 100px;
+            height: 50px;
+        }
 
-            .bookIcon {
-                width: 100px;
-                height: 80px;
-            }
+        .items {
+            width: 100%;
+            height: 100%;
 
-            div {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
+            padding: 20px 0px 30px 0px;
+            box-sizing: border-box;
 
-                label {
-                    font-size: 16px;
-                }
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 100px;
+            overflow-x: auto;
 
-                span {
-                    font-size: 12px;
-                    box-sizing: border-box;
-                    padding: 5px;
-                    border-radius: 5px;
-
-                }
-
-                .close {
-                    border: 1px solid var(--color-warning);
-                    color: var(--color-warning);
-                }
-
-                .far {
-                    border: 1px solid var(--color-success);
-                    color: var(--color-success);
-                }
-            }
-
+            gap: 10px;
         }
     }
+
 }
+
 
 span,
 label {

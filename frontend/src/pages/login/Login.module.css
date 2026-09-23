@@ -23,7 +23,7 @@
 
     background-color: var(--color-bg-card);
 
-    border-radius: 10px;
+    border-radius: 75px;
     box-shadow: var(--shadow-card);
 
     div {

@@ -10,8 +10,14 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: var(--color-bg-main);
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./assets/banner-recommended.png);
+    backdrop-filter: blur(30px);
+    background-attachment: fixed;
 
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+    scrollbar-width: thin;
 }
 
 a {
@@ -22,9 +28,12 @@ a {
     /* Background */
 
     /* Principal */
-    --color-bg-main: #EFEFEF;
+    --color-bg-main: #EBEBEB;
+
     /* Cards */
-    --color-bg-card: #FFFFFF;
+    --color-bg-card: rgba(0, 0, 0, 0.5);
+    --hover-bg-card: rgba(0, 0, 0, 0.15);
+
     /* Card Shadow */
     --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
 
@@ -39,18 +48,18 @@ a {
     /* Texto */
 
     /* Principal */
-    --color-text-main: #000000;
+    --color-text-main: #FFFFFF;
     /* Secundário */
     --color-text-sec: #64748B;
 
     /* Status */
-    
+
     /* Perigo */
     --color-danger: #DC2626;
     /* Alerta */
     --color-warning: #D97706;
     /* Sucesso */
-    --color-success: #16A34A;
+    --color-success: #0e6e31;
 
     /* Botão */
     --color-button-black-bg: #000000;
