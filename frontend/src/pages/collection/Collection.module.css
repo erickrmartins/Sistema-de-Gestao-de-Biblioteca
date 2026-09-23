@@ -1,0 +1,213 @@
+.container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 20px;
+
+    gap: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    gap: 20px;
+
+    .genreDiv {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        width: 100%;
+
+        box-sizing: border-box;
+        padding: 25px 30px 20px 30px;
+
+        label {
+            height: 50px;
+            width: 100%;
+
+            font-weight: 700;
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+.recommended {
+    width: 100%;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: var(--shadow-card);
+
+    background-image: url('../../assets/banner-recommended.png');
+    background-position: center;
+    background-size: cover;
+
+    padding: 30px;
+
+    .recommendedSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+
+        .recommendedDiv {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            width: 100%;
+            height: 100%;
+
+            .recommendedCover {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                height: 100%;
+                min-width: 30%;
+                max-width: 50%;
+
+                img {
+                    width: 100%;
+                    max-width: 46vh;
+                    max-height: 69vh;
+                    aspect-ratio: 2/3;
+                    object-fit: cover;
+
+                    border-radius: 20px;
+                    border: 1px solid rgba(0, 0, 0, 0.5);
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35);
+                }
+            }
+
+            .recommendedData {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                gap: 10px;
+                width: 40%;
+                height: 100%;
+
+                h1, h2, p {
+                    margin: 0;
+                }
+
+                h1 {
+                    font-size: 50px;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                p {
+                    text-align: justify;
+                }
+            }
+
+            .next {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 10%;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    height: 40%;
+                    width: 50%;
+
+                    font-size: 50px;
+                    border-radius: 75px;
+                    cursor: pointer;
+
+                    border: 1px solid rgba(255, 255, 255, 0.35);
+                    background-color: rgba(0, 0, 0, 0.35);
+                    color: var(--color-bg-card);
+
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        color: var(--color-text-main);
+                        background-color: rgba(255, 255, 255, 0.5);
+                    }
+                }
+
+            }
+        }
+
+
+        .circle {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+
+            gap: 10px;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+
+                .active circle {
+                    stroke: var(--color-bg-card);
+                    fill: rgba(255, 255, 255, 0.35);
+                }
+
+                .inactive circle {
+                    stroke: var(--color-bg-card);
+                }
+            }
+        }
+
+    }
+}
+
+
+.books {
+    width: 100%;
+    height: 100%;
+
+    padding: 20px 0px 30px 0px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+    overflow-x: auto;
+
+    gap: 10px;
+}

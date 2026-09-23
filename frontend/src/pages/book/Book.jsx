@@ -57,13 +57,13 @@ function Book() {
     return (
         <div className={styles.container}>
             <div className={styles.left}>
-                <BookIcon className={styles.icon} />
+                <img src={book.cover} alt={book.title} className={styles.cover} />
                 {getStatus()}
             </div>
 
             <div className={styles.right}>
                 <div className={styles.mainData}>
-                    <span className={styles.genre}>{book.genre.toUpperCase()}</span>
+                    <span className={styles.genre}>{book.genre.nome.toUpperCase()}</span>
                     <h1>{book.title}</h1>
                     <h2>por {book.author.nome}</h2>
                 </div>

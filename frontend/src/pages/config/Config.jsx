@@ -1,7 +1,7 @@
 
 function Config() {
     return (
-        <span>Config funcionando!</span>
+        <span>agora a config funciona!</span>
     )
 }
 

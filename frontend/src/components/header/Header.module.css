@@ -6,31 +6,80 @@
 
     height: 100%;
     width: 100%;
-    padding: 10px 30px 10px 30px;
+    padding: 5px 30px 5px 30px;
     box-sizing: border-box;
-
-    border-bottom: 1px solid #CCCCCC;
-    box-shadow: 0px 4px 8px rgba(150, 150, 150, 0.25);
-    background-color: #FFFFFF;
 }
 
-.navigation {
-    background-color: #FFFFFF;
-
-}
-
-.notification {
+.icons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    
-    .bellIcon {
+    width: 40%;
+    height: 100%;
+    gap: 15px;
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         width: 30px;
         height: 30px;
+        padding: 10px;
+        border-radius: 75px;
+
+        path,
+        circle {
+            stroke: var(--color-text-main);
+            fill: none;
+        }
+    }
+}
+
+nav {
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        list-style: none;
+
+        li {
+            padding: 5px 10px 5px 10px;
+            border-radius: 25px;
+
+            text-align: center;
+
+            transition: 0.3s ease;
+
+            .item {
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+li:hover,
+.icon:hover {
+    transform: scale(1.05);
+}
+
+.active {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.icon.activeIcon {
+    path {
+        stroke: var(--color-bg-card);
+        fill: var(--color-bg-card);
     }
 
-    .bellIcon:hover path {
-        cursor: pointer;
-        fill: #000000;
+    circle {
+        stroke: black;
     }
+
+}
+
+.notWorker {
+    display: none;
 }

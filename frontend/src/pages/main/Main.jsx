@@ -6,9 +6,11 @@ import { Outlet } from 'react-router-dom';
 function Main() {
     return (
         <div className={styles.container}>
-            <aside className={styles.sidebar}>
-                <Sidebar />
-            </aside>
+            {/*
+                <aside className={styles.sidebar}>
+                    <Sidebar />
+                </aside>
+            */}
 
             <div className={styles.mainContainer}>
                 <header className={styles.header}>
