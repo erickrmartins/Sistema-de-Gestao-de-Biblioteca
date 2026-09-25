@@ -10,26 +10,16 @@ function Header() {
     const currentPath = location.pathname.split('/')[1];
     const profile = DataProfile();
 
-    function isWorker() {
-        let result;
-
-        if (profile.role === 'Leitor') {
-            result = false;
-        } else {
-            result = true;
-        }
-
-        return result;
-    }
-
     return (
         <header className={styles.header}>
             <nav>
                 <ul>
                     <li className={currentPath === 'acervo' ? styles.active : ''}><Link className={styles.item} to='/acervo'>Acervo</Link></li>
                     <li className={currentPath === 'perfil' ? styles.active : ''}><Link className={styles.item} to='/perfil'>Perfil</Link></li>
-                    <li className={`${currentPath === 'registra' ? styles.active : ''} ${isWorker() ? styles.worker : styles.notWorker}`}><Link className={styles.item} to='/registra'>Registrar</Link></li>
-                    <li className={`${currentPath === 'gerencia' ? styles.active : ''} ${isWorker() ? styles.worker : styles.notWorker}`}><Link className={styles.item} to='/gerencia'>Gerenciar</Link></li>
+                    <li className={`${currentPath === 'registrar' ? styles.active : ''} 
+                    ${(profile.role != 'Leitor') ? styles.worker : styles.notWorker}`}>
+                        <Link className={styles.item} to='/registrar'>Registrar</Link></li>
+                    <li className={`${currentPath === 'gerenciar' ? styles.active : ''} ${(profile.role != 'Leitor') ? styles.worker : styles.notWorker}`}><Link className={styles.item} to='/gerenciar'>Gerenciar</Link></li>
                 </ul>
             </nav>
             <div className={styles.icons}>

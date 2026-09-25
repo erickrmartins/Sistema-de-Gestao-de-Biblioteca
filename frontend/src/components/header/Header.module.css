@@ -6,7 +6,7 @@
 
     height: 100%;
     width: 100%;
-    padding: 5px 30px 5px 30px;
+    padding: 5px 30px;
     box-sizing: border-box;
 }
 
@@ -30,10 +30,23 @@
 
         path,
         circle {
-            stroke: var(--color-text-main);
+            stroke: var(--color-card-text-main);
             fill: none;
         }
     }
+
+    .activeIcon {
+        path {
+            stroke: var(--color-item-active-bg);
+            fill: var(--color-item-active-bg);
+        }
+
+        circle {
+            stroke: var(--color-item-active-text);
+        }
+
+    }
+
 }
 
 nav {
@@ -54,6 +67,19 @@ nav {
             .item {
                 letter-spacing: 2px;
             }
+
+            &:hover {
+                color: var(--color-item-active-bg);
+            }
+        }
+
+        .active {
+            border: none;
+            background-color: var(--color-item-active-bg);
+
+            .item {
+                color: var(--color-item-active-text);
+            }
         }
     }
 }
@@ -63,23 +89,6 @@ li:hover,
     transform: scale(1.05);
 }
 
-.active {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.icon.activeIcon {
-    path {
-        stroke: var(--color-bg-card);
-        fill: var(--color-bg-card);
-    }
-
-    circle {
-        stroke: black;
-    }
-
-}
-
-.notWorker {
+nav ul .notWorker {
     display: none;
 }

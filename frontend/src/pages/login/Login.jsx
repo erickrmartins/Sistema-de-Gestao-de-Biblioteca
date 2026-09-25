@@ -1,38 +1,37 @@
 import styles from './Login.module.css';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import BackgroundEsquerda from '../../assets/background-login.png'
 
 function Login() {
-    const navigate = useNavigate();
-    
+
     return (
         <div className={styles.container}>
+            <div className={styles.esquerda}>
+                <img src={BackgroundEsquerda} alt='' className={styles.background} />
+            </div>
             <form className={styles.form}>
 
                 <div className={styles.divTitle}>
-                    <span className={styles.title}>Bem-vindo de volta!</span>
-                    <span className={styles.subtitle}>Digite suas credenciais para se autenticar na plataforma</span>
+                    <h1>Bem-vindo de volta!</h1>
+                    <h2>Digite suas credenciais para se autenticar na plataforma</h2>
                 </div>
 
                 <div className={styles.divEmail}>
-                    <label>E-mail:</label>
-                    <input type="email" placeholder="Digite seu e-mail" />
+                    <input type="email" placeholder="E-mail" />
                 </div>
 
                 <div className={styles.divPassword}>
-                    <label>Senha:</label>
-                    <input type="password" placeholder="Digite sua senha" />
-                    <button type="button">Esqueceu a senha?</button>
+                    <input type="password" placeholder="Senha" />
+                    <Link to='/esqueci-senha' className={styles.buttonEsqueciSenha}>Esqueceu a senha?</Link>
                 </div>
 
                 <div className={styles.divSubmit}>
-                    <button type="submit" onClick={() => navigate('/acervo')}
-                    >Entrar</button>
+                    <Link to='/acervo' className={styles.buttonEntrar}><button>Entrar</button></Link>
                 </div>
 
                 <div className={styles.divRegister}>
                     <label>Não possui uma conta?</label>
-                    <button type="button" onClick={() => navigate('/registrar')}
-                    >Cadastrar</button>
+                    <Link to='/cadastrar' className={styles.buttonCadastrar}>Cadastrar</Link>
                 </div>
 
             </form>

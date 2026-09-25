@@ -8,10 +8,10 @@ import Circle from '../../assets/circle.svg?react'
 function Collection() {
     const books = DataBooks();
     const genres = DataGenre();
-    const recommendeds = books.filter((book) => book.recommended === true);
+    const recommendeds = books.filter((book) => book.recomendado === true);
 
     function getBooksByGenre(genre) {
-        const filtered = books.filter((book) => book.genre.id === genre.id);
+        const filtered = books.filter((book) => book.idGenero.id === genre.id);
 
         return (filtered.length === 0) ? null :
             (
@@ -46,13 +46,13 @@ function Collection() {
             <div className={styles.recommendedSection}>
                 <div className={styles.recommendedDiv}>
                     <div className={styles.recommendedCover}>
-                        <img src={book.cover} alt={book.title} />
+                        <img src={`/bookCovers/${book.id}.jpg`} alt={book.titulo} />
                     </div>
                     <div className={styles.recommendedData}>
-                        <span>{book.genre.nome}</span>
-                        <h1>{book.title}</h1>
-                        <h2>{book.author.nome}</h2>
-                        <p>{book.synopsis}</p>
+                        <span>{book.idGenero.nome}</span>
+                        <h1>{book.titulo}</h1>
+                        <h2>{book.idAutor.nome}</h2>
+                        <p>{book.sinopsis}</p>
                     </div>
                     <div className={styles.next}>
                         <button onClick={next}>&gt;</button>

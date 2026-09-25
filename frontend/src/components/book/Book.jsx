@@ -6,11 +6,11 @@ function Book({book}) {
     return (
         <Link to={'/acervo/livro/' + book.ISBN} className={styles.book}>
             <img
-                src={book.cover}
-                alt={book.title}
+                src={`/bookCovers/${book.id}.jpg`}
+                alt={book.titulo}
             />
-            <h1>{book.title}</h1>
-            <h2>{book.author.nome}</h2>
+            <h1>{book.titulo}</h1>
+            <h2>{book.idAutor.nome}</h2>
         </Link>
     )
 }

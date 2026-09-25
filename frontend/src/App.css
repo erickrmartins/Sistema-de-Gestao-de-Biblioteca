@@ -1,5 +1,5 @@
 * {
-    color: var(--color-text-main);
+    color: var(--color-card-text-main);
 
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -12,56 +12,60 @@ body {
     padding: 0px;
     width: 100%;
     min-height: 100vh;
-    background-image: url(./assets/banner-recommended.png);
-    backdrop-filter: blur(30px);
-    background-attachment: fixed;
+    background-color: var(--color-main-bg);
 
-    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+    scrollbar-color: #4A6B3A var(--color-main-bg);
     scrollbar-width: thin;
+
+    button {
+        color: var(--color-button-text);
+        background-color: var(--color-button-bg);
+        border-radius: 10px;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-button-hover);
+        }
+    }
 }
 
 a {
     text-decoration: none;
 }
 
+
 :root {
-    /* Background */
+    --color-main-bg: #FAF9F6;
 
-    /* Principal */
-    --color-bg-main: #EBEBEB;
+    /* Card claro e leve */
+    --color-card-bg: #FFFFFF;
+    --color-card-border: #E8E4D9;
+    --color-card-text-main: #2C302E;
+    --color-card-text-sec: #6E7571;
+    --shadow-card: 0 4px 20px rgba(255, 255, 255, 0.25);
 
-    /* Cards */
-    --color-bg-card: rgba(0, 0, 0, 0.5);
-    --hover-bg-card: rgba(0, 0, 0, 0.15);
+    /* Superfícies internas do card (barras, áreas de destaque) */
+    --color-card-surface: #F3EFE6;
 
-    /* Card Shadow */
-    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+    /* Botão primário */
+    --color-button-bg: #4A6B3A;
+    --color-button-hover: #3B562E;
+    --color-button-text: #FFFFFF;
+    --color-button-bg-trans: #4a6b3abd;
 
-    /* Cores */
+    /* Input */
+    --color-input-bg: #F3EFE6;
+    --color-input-border: #E8E4D9;
+    --color-input-border-focus: #4A6B3A;
+    --color-input-text: #2C302E;
 
-    /* Verde  */
-    --color-green: #16A34A;
+    /* Item ativo (abas, chips) */
+    --color-item-active-bg: #4A6B3A;
+    --color-item-active-text: #EBF2E6;
 
-    /* Verde hover */
-    --color-green-hover: #15803D;
-
-    /* Texto */
-
-    /* Principal */
-    --color-text-main: #FFFFFF;
-    /* Secundário */
-    --color-text-sec: #64748B;
-
-    /* Status */
-
-    /* Perigo */
-    --color-danger: #DC2626;
-    /* Alerta */
-    --color-warning: #D97706;
-    /* Sucesso */
-    --color-success: #0e6e31;
-
-    /* Botão */
-    --color-button-black-bg: #000000;
-    --color-button-black-text: #FFFFFF;
+    /* Estados (legíveis sobre o card claro) */
+    --color-danger: #D9534F;
+    --color-warning: #E6A23C;
+    --color-success: #4A6B3A;
 }
