@@ -1,6 +1,5 @@
 import styles from './Main.module.css';
 import Header from '../../components/header/Header.jsx';
-import Sidebar from '../../components/sidebar/SideBar.jsx';
 import { Outlet } from 'react-router-dom';
 
 function Main() {

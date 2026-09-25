@@ -1,7 +1,6 @@
 import styles from './Book.module.css';
 import { DataBooks } from '../../fake-data/DataBooks';
 import { useLocation, Link } from 'react-router-dom';
-import BookIcon from '../../assets/Book.svg?react';
 import { DataCopy } from '../../fake-data/DataCopy.jsx';
 
 function Book() {
@@ -47,9 +46,9 @@ function Book() {
         return (
             <div className={styles.status}>
                 <span className= {result === 'Disponível' ? styles.green : styles.red}>{result}</span>
-                <Link className={styles.button}>
+                <button className={styles.button}>
                 {result === 'Disponível' ? "Reservar Livro" : "Entrar na Lista de Espera"}
-                </Link>
+                </button>
             </div>
         )
     }

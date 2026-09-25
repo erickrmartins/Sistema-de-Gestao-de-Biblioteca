@@ -15,7 +15,7 @@ function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
-      <Route path="/registrar" element={<Register />} />
+      <Route path="/cadastrar" element={<Register />} />
       <Route path="/" element={<Navigate to={'/acervo'} />} />
       <Route element={<Main />}>
         <Route path="/acervo" element={<Collection />} />

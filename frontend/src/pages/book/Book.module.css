@@ -8,8 +8,8 @@
     justify-content: center;
 
     box-shadow: var(--shadow-card);
-    background-color: var(--color-bg-card);
-    border-radius: 75px;
+    background-color: var(--color-card-bg);
+    border-radius: 12px;
     gap: 20px;
 
     box-sizing: border-box;
@@ -33,7 +33,6 @@
         aspect-ratio: 2/3;
         object-fit: cover;
         border-radius: 10px;
-
     }
 
     .status {
@@ -50,11 +49,6 @@
             align-items: center;
             justify-content: center;
 
-            border: none;
-            border-radius: 10px;
-            background-color: var(--color-button-black-bg);
-            color: var(--color-button-black-text);
-
             width: 90%;
             height: 40px;
 
@@ -70,13 +64,17 @@
         }
 
         .red {
-            color: var(--color-danger);
-            border: 1px solid var(--color-danger);
+            color: var(--color-card-bg);
+            font-weight: 600;
+            background-color: var(--color-danger);
+            border: none;
         }
 
         .green {
-            color: var(--color-success);
-            border: 1px solid var(--color-success);
+            color: var(--color-card-bg);
+            font-weight: 600;
+            background-color: var(--color-success);
+            border: none;
         }
     }
 }
@@ -100,13 +98,13 @@
             font-weight: 500;
             letter-spacing: 1px;
             margin: 0px;
-            color: var(--color-text-main);
+            color: var(--color-card-text-main);
         }
 
         h2,
         .genre {
             margin: 0px;
-            color: var(--color-text-sec);
+            color: var(--color-card-text-sec);
             font-size: 14px;
         }
     }
@@ -121,7 +119,7 @@
         align-items: center;
         gap: 10px;
 
-        background-color: var(--color-bg-main);
+        background-color: var(--color-card-surface);
         box-sizing: border-box;
         padding: 10px 20px 10px 20px;
         border-radius: 10px;
