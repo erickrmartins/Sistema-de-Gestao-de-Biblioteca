@@ -7,6 +7,17 @@
 
 }
 
+h1 {
+    margin: 0;
+    color: var(--color-card-text-main);
+}
+
+h2 {
+    margin: 0;
+    color: var(--color-card-text-sec);
+
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -23,9 +34,11 @@ body {
         border-radius: 10px;
         border: none;
 
+        transition: 0.3s ease;
+
         &:hover {
             cursor: pointer;
-            background-color: var(--color-button-hover);
+            filter: brightness(0.85);
         }
     }
 }
@@ -55,11 +68,16 @@ a {
     --color-button-bg-trans: #4a6b3abd;
 
     /* Input */
-    --color-input-bg: #F3EFE6;
-    --color-input-border: #E8E4D9;
-    --color-input-border-focus: #4A6B3A;
-    --color-input-text: #2C302E;
+    /* Input ativo */
+    --color-input-bg: #FFFFFF;
+    --color-input-border: #A9744A;
+    --color-input-border-focus: #B8500F;
+    --color-input-text: #3A2618;
 
+    /* Input desabilitado */
+    --color-input-disabled-bg: rgba(58, 38, 24, 0.06);
+    --color-input-disabled-border: transparent;
+    --color-input-disabled-text: rgba(58, 38, 24, 0.40);
     /* Item ativo (abas, chips) */
     --color-item-active-bg: #4A6B3A;
     --color-item-active-text: #EBF2E6;
@@ -69,3 +87,4 @@ a {
     --color-warning: #E6A23C;
     --color-success: #4A6B3A;
 }
+
