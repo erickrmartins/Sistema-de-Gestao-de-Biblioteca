@@ -23,10 +23,8 @@ function App() {
         <Route path="/acervo/livro/*" element={<Book />} />
         <Route path="/perfil" element={<Profile />} />
         <Route path="/perfil/visualizar-informacoes" element={<ViewInfo />} />
-        <Route path="/config" element={<Config />} />
 
         <Route path="*" element={<NotFound />} />
-
       </Route>
     </Routes>
   )
