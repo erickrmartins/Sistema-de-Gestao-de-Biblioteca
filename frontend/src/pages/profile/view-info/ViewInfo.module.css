@@ -1,0 +1,162 @@
+.container {
+    width: 100%;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 10px;
+
+    box-sizing: border-box;
+    padding-inline: 30px;
+}
+
+h1 {
+    font-size: 30px;
+    color: var(--color-card-text-main);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 16px;
+    color: var(--color-card-text-sec);
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--color-card-bg);
+    box-shadow: var(--shadow-card);
+    border-radius: 10px;
+    border: 1px solid var(--color-card-border);
+
+
+    box-sizing: border-box;
+    padding: 30px;
+
+    width: 100%;
+    height: 100%;
+
+    label {
+        font-size: 20px;
+        color: var(--color-card-text-main);
+        font-weight: 500;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+
+        .divInputI {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            label {
+                font-size: 14px;
+                color: var(--color-card-text-main);
+                font-weight: 500;
+            }
+
+            input {
+                background-color: var(--color-input-bg);
+                border: 1px solid var(--color-input-border);
+                border-radius: 5px;
+                box-sizing: border-box;
+                padding: 5px 10px;
+                padding-left: 10px;
+
+                &:focus {
+                    border: 1px solid var(--color-input-border-focus);
+                }
+            }
+        }
+
+        .divInputII {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+
+            label {
+                font-size: 14px;
+                color: var(--color-card-text-main);
+                font-weight: 500;
+            }
+
+            input {
+                background-color: var(--color-input-bg);
+                border: 1px solid var(--color-input-border);
+                border-radius: 5px;
+                box-sizing: border-box;
+                padding: 5px 10px;
+                padding-left: 10px;
+
+                &:focus {
+                    border: 1px solid var(--color-input-border-focus);
+                }
+            }
+
+        }
+
+        .disabled {
+            input {
+                background-color: var(--color-input-disabled-bg);
+                border: 1px solid var(--color-inputdisabled-border);
+
+            }
+
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .desativar {
+        width: 100px;
+        background-color: var(--color-danger);
+        padding: 20px;
+
+        &:hover {
+            filter: brightness(0.8);
+        }
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .cancelar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            width: 100px;
+            padding: 20px;
+            border: 1px solid var(--color-danger);
+            border-radius: 10px;
+            color: var(--color-danger);
+            transition: 0.3s ease;
+            font-size: 14px;
+            &:hover {
+                filter: brightness(0.7);
+            }
+        }
+
+        button {
+            border: 1px solid var(--color-button-bg);
+            width: 100px;
+            padding: 20px;
+        }
+
+
+    }
+}

@@ -14,17 +14,17 @@ function Header() {
         <header className={styles.header}>
             <nav>
                 <ul>
-                    <li className={currentPath === 'acervo' ? styles.active : ''}><Link className={styles.item} to='/acervo'>Acervo</Link></li>
-                    <li className={currentPath === 'perfil' ? styles.active : ''}><Link className={styles.item} to='/perfil'>Perfil</Link></li>
-                    <li className={`${currentPath === 'registrar' ? styles.active : ''} 
+                    <li className={currentPath === 'acervo' ? styles.active : styles.notActive}><Link className={styles.item} to='/acervo'>Acervo</Link></li>
+                    <li className={currentPath === 'perfil' ? styles.active : styles.notActive}><Link className={styles.item} to='/perfil'>Perfil</Link></li>
+                    <li className={`${currentPath === 'registrar' ? styles.active : styles.notActive} 
                     ${(profile.role != 'Leitor') ? styles.worker : styles.notWorker}`}>
                         <Link className={styles.item} to='/registrar'>Registrar</Link></li>
-                    <li className={`${currentPath === 'gerenciar' ? styles.active : ''} ${(profile.role != 'Leitor') ? styles.worker : styles.notWorker}`}><Link className={styles.item} to='/gerenciar'>Gerenciar</Link></li>
+                    <li className={`${currentPath === 'gerenciar' ? styles.active : styles.notActive} ${(profile.role != 'Leitor') ? styles.worker : styles.notWorker}`}><Link className={styles.item} to='/gerenciar'>Gerenciar</Link></li>
                 </ul>
             </nav>
             <div className={styles.icons}>
-                <Link to='/notifi'><BellIcon className={`${styles.icon} ${currentPath === 'notifi' ? styles.activeIcon : undefined}`} /></Link>
-                <Link to='/config'><ConfigIcon className={`${styles.icon} ${currentPath === 'config' ? styles.activeIcon : undefined}`} /></Link>
+                <Link to='/notifi'><BellIcon className={`${styles.icon} ${currentPath === 'notifi' ? styles.activeIcon : styles.notActive}`} /></Link>
+                <Link to='/config'><ConfigIcon className={`${styles.icon} ${currentPath === 'config' ? styles.activeIcon : styles.notActive}`} /></Link>
                 <ProfileCard className={styles.profileCard} />
             </div>
         </header >

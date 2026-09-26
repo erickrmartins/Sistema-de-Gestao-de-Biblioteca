@@ -9,6 +9,7 @@ import Profile from './pages/profile/Profile.jsx'
 import Config from './pages/config/Config.jsx'
 import NotFound from './pages/not-found/NotFound.jsx'
 import Book from './pages/book/Book.jsx'
+import ViewInfo from './pages/profile/view-info/ViewInfo.jsx'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/acervo" element={<Collection />} />
         <Route path="/acervo/livro/*" element={<Book />} />
         <Route path="/perfil" element={<Profile />} />
+        <Route path="/perfil/visualizar-informacoes" element={<ViewInfo />} />
         <Route path="/config" element={<Config />} />
 
         <Route path="*" element={<NotFound />} />

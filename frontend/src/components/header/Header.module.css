@@ -27,6 +27,8 @@
         height: 30px;
         padding: 10px;
         border-radius: 75px;
+        transition: 0.3s ease;
+
 
         path,
         circle {
@@ -84,9 +86,16 @@ nav {
     }
 }
 
-li:hover,
+li:hover {
+    transform: scale(1.1);
+}
+
 .icon:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
+}
+
+.notActive.item {
+    color: var(--color-item-active-bg);
 }
 
 nav ul .notWorker {

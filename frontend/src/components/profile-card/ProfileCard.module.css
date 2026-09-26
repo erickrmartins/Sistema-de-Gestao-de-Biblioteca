@@ -9,7 +9,8 @@
 
     border-radius: 50px;
     box-shadow: var(--shadow-card);
-    background-color: var(--color-bg-card);
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
 
     box-sizing: border-box;
     padding: 5px 10px 5px 10px;
@@ -25,12 +26,11 @@
 
     .name {
         font-size: 14px;
-        color: var(--color-text-main)
     }
 
     .role {
         font-size: 10px;
-        color: var(--color-text-sec)
+        color: var(--color-card-text-sec)
     }
 
 }
@@ -38,6 +38,7 @@
 .icon {
     width: 50px;
     height: 50px;
+    border-radius: 50px;
 }
 
 .logout {
@@ -46,6 +47,7 @@
     border-radius: 25px;
     box-sizing: border-box;
     padding: 5px;
+    transition: 0.3s ease;
 
     g {
         stroke: var(--color-danger);
@@ -55,7 +57,7 @@
         background-color: var(--color-danger);
 
         g {
-            stroke: var(--color-bg-card);
+            stroke: var(--color-card-bg);
 
         }
     }
